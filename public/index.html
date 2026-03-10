@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlassUI Generator - Create Stunning Glassmorphism Effects</title>
+    <meta name="description" content="Generate beautiful glassmorphism CSS effects, tailored gradients, and premium UI components instantly. Upgrade to Pro for React components, animations, and Tailwind exports.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Dashboard Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo"></div>
+                <h1>GlassUI</h1>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" class="active">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Generator
+                </a>
+                <a href="#" class="pro-link">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    Pro Components <span class="badge">PRO</span>
+                </a>
+                <a href="#">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
+                    Exports
+                </a>
+            </nav>
+
+            <div class="upgrade-card">
+                <h3>Unlock Full Potential</h3>
+                <p>Get React, Vue & Tailwind exports, plus 50+ templates.</p>
+                <button class="btn btn-primary btn-glow" id="upgrade-btn">Upgrade to Pro - $29</button>
+            </div>
+        </aside>
+
+        <!-- Main Content (Generator) -->
+        <main class="main-content" id="preview-area">
+            <!-- Background Elements -->
+            <div class="blob shape-1"></div>
+            <div class="blob shape-2"></div>
+            <div class="blob shape-3"></div>
+
+            <header class="top-nav">
+                <h2>Playground</h2>
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="randomize-btn">Randomize</button>
+                    <button class="btn btn-primary" id="export-react-btn">Export React</button>
+                    <button class="btn btn-outline" id="export-vue-btn">Export Vue</button>
+                    <button class="btn btn-outline" id="export-tailwind-btn">Tailwind</button>
+                </div>
+            </header>
+
+            <div class="preview-container">
+                <div class="glass-card" id="glass-preview">
+                    <div class="card-header">
+                        <div class="avatar"></div>
+                        <div class="info">
+                            <div class="name">GlassUI Component</div>
+                            <div class="role">Premium Design</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        This is a live preview of your glassmorphism component. Adjust the sliders to see the effect in real-time.
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary small">Action</button>
+                        <button class="btn btn-outline small">Secondary</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor Panel -->
+            <div class="editor-panel">
+                <div class="editor-header">
+                    <h3>Properties</h3>
+                </div>
+                
+                <div class="control-group">
+                    <div class="control-header">
+                        <label for="blur-slider">Blur (<span id="blur-val">10</span>px)</label>
+                    </div>
+                    <input type="range" id="blur-slider" min="0" max="40" value="10" step="1">
+                </div>
+
+                <div class="control-group">
+                    <div class="control-header">
+                        <label for="opacity-slider">Opacity (<span id="opacity-val">0.2</span>)</label>
+                    </div>
+                    <input type="range" id="opacity-slider" min="0" max="1" value="0.2" step="0.05">
+                </div>
+                
+                <div class="control-group">
+                    <div class="control-header">
+                        <label for="border-slider">Border (<span id="border-val">1</span>px)</label>
+                    </div>
+                    <input type="range" id="border-slider" min="0" max="5" value="1" step="1">
+                </div>
+                
+                <div class="control-group">
+                    <div class="control-header">
+                        <label>Color</label>
+                    </div>
+                    <input type="color" id="color-picker" value="#ffffff">
+                </div>
+                
+                <div class="code-output">
+                    <div class="code-header">
+                        <h4>CSS Code</h4>
+                        <button class="btn-copy" id="copy-btn">Copy</button>
+                    </div>
+                    <pre><code id="css-code"></code></pre>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
