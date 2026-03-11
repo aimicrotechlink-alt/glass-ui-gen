@@ -409,6 +409,40 @@ input[type=color]::-webkit-color-swatch {
     color: var(--text-secondary);
 }
 
+.code-tabs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--brand-font);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.tab-btn:hover {
+    color: white;
+    background: rgba(255,255,255,0.05);
+}
+
+.tab-btn.active {
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+}
+
+.tab-btn .badge {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.3rem;
+}
+
 .btn-copy {
     background: transparent;
     border: none;
