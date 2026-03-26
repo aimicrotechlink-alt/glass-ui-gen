@@ -9,8 +9,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Since we are mocking or waiting for real keys, we handle the case where stripe secret is missing
-const stripe = process.env.STRIPE_SECRET_KEY ? stripeStr(process.env.STRIPE_SECRET_KEY) : null;
+// Check for Stripe key
+const stripeKey = process.env.STRIPE_SECRET_KEY;
+if (stripeKey) {
+    console.log("✅ Stripe Secret Key loaded successfully.");
+} else {
+    console.log("⚠️ Stripe Secret Key MISSING. Server running in MOCK mode.");
+}
+const stripe = stripeKey ? stripeStr(stripeKey) : null;
 
 app.use(cors());
 app.use(express.static('public'));
